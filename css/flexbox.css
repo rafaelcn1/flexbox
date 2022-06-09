@@ -1,0 +1,49 @@
+/* Flexbox que é uma propriedade razoavelmente atual. Portanto, é preciso ter cuidado ao utilizar essa propriedade, pois nem todos os navegadores a aceitam. Para descobrir em quais sistemas a propriedade funciona podemos consultar o site https://caniuse.com/ Basta digitar o nome da propriedade no campo de busca */
+
+.cabecalhoPrincipal .container {
+    display: flex;
+    /* Colocar os elementos um ao lado do outro */
+    align-items: center;
+    /* Alinhar os elementos no centro */
+    justify-content: space-between;
+    /* Colocar o espaco dos elementos entre eles */
+}
+
+.cabecalhoPrincipal-nav {
+    display: flex;
+    /* Colocar os elementos um ao lado do outro */
+}
+
+.cabecalhoPrincipal-nav a {
+    margin: 0 0 0 10px;
+    /* Colocar um pequeno espaçamento a esquerda dos elementos, pois o display flex na tag NAV não tem espaço entre eles para podermos usar o justify-content: space-between; */
+}
+
+.rodapePrincipal-patrocinadores .container {
+    display: flex;
+    /* Colocar os elementos um ao lado do outro */
+    justify-content: space-between;
+    /* Colocar o espaco dos elementos entre eles */
+}
+
+.rodapePrincipal-patrocinadores-list {
+    display: flex;
+    /* Colocar os elementos um ao lado do outro */
+    justify-content: space-around;
+    /* Colocar o espaco dos elementos ao redor entre eles */
+    width: 75%;
+    /* determinar o tamanho total em apenas 1/3 do tamanho do elemento */
+    align-items: center;
+    /* Alinhar os elementos no centro */
+    margin-right: 5%;
+}
+
+.rodapePrincipal-contatoForm {
+    display: flex;
+    width: 25%;
+}
+
+.rodapePrincipal-contatoForm-fieldset {
+    display: flex;
+    /*o flex também deixa os filhos com a mesma aparência dos pais!*/
+}
