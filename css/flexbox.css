@@ -101,6 +101,8 @@
 .videoSobre-video {
     flex-grow: 1;
     /* os elementos irão crescer 1, esse valor pode ser N */
+    flex-shrink: 2;
+    /* Irá dminuir duas vezes mais, se for 0 ele não diminui nada*/
 }
 
 
@@ -143,5 +145,11 @@
     .cabecalhoPrincipal-nav-link-app {
         order: -1;
         /* Determina a ordem do elemento, por padrão é 0, quando colocamos -1, é para vir antes de todos */
+    }
+    .videoSobre .container {
+        flex-direction: column;
+    }
+    .videoSobre-video {
+        margin: 0 auto;
     }
 }
