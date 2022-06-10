@@ -81,3 +81,67 @@
     margin-left: 0;
     /* Quer dizer que vamos remover a margem a esquerda do 4 elemento do pai citado na classe acima*/
 }
+
+.videoSobre .container {
+    display: flex;
+}
+
+.videoSobre-sobre {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    text-align: center;
+}
+
+.videoSobre-sobre-list {
+    flex-grow: 1;
+    /* os elementos irão crescer 1, esse valor pode ser N */
+}
+
+.videoSobre-video {
+    flex-grow: 1;
+    /* os elementos irão crescer 1, esse valor pode ser N */
+}
+
+
+/* Ajuste para Mobile */
+
+@media(max-width: 768px) {
+    /* Até 768px será usado as definições abaixo */
+    .cabecalhoPrincipal-nav {
+        display: flex;
+        flex-direction: column;
+    }
+    .cabecalhoPrincipal .container {
+        flex-direction: column;
+        align-items: initial;
+        /* Nesse caso o alinhamento será feito do incio do elemento e não centralizado como estava antes */
+        text-align: center;
+        /* Alinhando os textos centralizado */
+    }
+    .conteudoPrincipal-cursos {
+        flex-direction: column;
+    }
+    .conteudoPrincipal-cursos-link {
+        width: 100%;
+    }
+    .rodapePrincipal-navMap-list {
+        height: auto;
+        /* Vai ser calculado automatico */
+    }
+    .rodapePrincipal-patrocinadores .container {
+        flex-direction: column;
+    }
+    .rodapePrincipal-patrocinadores-list {
+        width: 100%;
+    }
+    .rodapePrincipal-contatoForm {
+        width: 100%;
+        justify-content: center;
+        /* Ajustar o conteudo, nesse caso será centralizado */
+    }
+    .cabecalhoPrincipal-nav-link-app {
+        order: -1;
+        /* Determina a ordem do elemento, por padrão é 0, quando colocamos -1, é para vir antes de todos */
+    }
+}
