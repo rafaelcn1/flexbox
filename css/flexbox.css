@@ -47,3 +47,37 @@
     display: flex;
     /*o flex também deixa os filhos com a mesma aparência dos pais!*/
 }
+
+.rodapePrincipal-navMap-list {
+    display: flex;
+    /* Colocar os elementos um ao lado do outro, deixando os filhos com a mesma aparência dos pais  */
+    flex-direction: column;
+    /* Colocar os elementos em linha, mas em colunas, pois flex-direction: row; padrão do display flex trabalha com row que é igual em linha  */
+    flex-wrap: wrap;
+    /* O flex-wrap: wrap, server para quando acabar o tamanho do elemento, extrapolando as alturas, ele quebrar o mesmo para a proxima coluna */
+    /* flex-flow: wrap column; Serve como atalho das duas propriedades acima */
+    height: 250px;
+    /* Para o flex-wrap: wrap ter efeito, precisamos definir um tamanho, nesse caso 250px */
+}
+
+.conteudoPrincipal-cursos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.conteudoPrincipal-cursos-link {
+    width: 23%;
+    margin: 1%;
+}
+
+.conteudoPrincipal-cursos-link:nth-child(4n) {
+    /* nth-child(4n) serve para pegar o "quarto filho" adicionamos entre os parênteses o 4n, atuando apenas nele  */
+    margin-right: 0;
+    /* Quer dizer que vamos remover a margem a direita do 4 elemento do pai citado na classe acima*/
+}
+
+.conteudoPrincipal-cursos-link:nth-child(4n+1) {
+    /* nth-child(4n+1) serve para pegar o proximo elemendo do "quarto filho" adicionamos entre os parênteses o 4n+1, atuando apenas nele  */
+    margin-left: 0;
+    /* Quer dizer que vamos remover a margem a esquerda do 4 elemento do pai citado na classe acima*/
+}
